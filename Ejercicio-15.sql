@@ -1,0 +1,15 @@
+-- 15. Devuelve los miembros que alquilaron al menos una película entre el año 2010 y el 2015
+
+SELECT * 
+FROM PUBLIC.MEMBERS mem
+JOIN PUBLIC.MEMBERS_MOVIE_RENTAL r ON mem.MEMBER_ID = r.MEMBER_MOVIE_RENTAL_ID
+JOIN PUBLIC.MOVIES mov ON mem.MEMBER_ID = mov.MOVIE_ID
+WHERE YEAR(r.MEMBER_RENTAL_DATE) BETWEEN 2010 AND 2015;
+
+
+
+
+
+
+
+
