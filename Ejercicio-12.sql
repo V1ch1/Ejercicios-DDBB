@@ -1,0 +1,5 @@
+-- 12. Indica la edad media de los directores vivos
+
+SELECT AVG(DATEDIFF(YEAR,DIRECTOR_BIRTH_DATE,CURRENT_DATE)) AS edad_media 
+FROM DIRECTORS
+WHERE DIRECTOR_DEAD_DATE IS NOT NULL;
